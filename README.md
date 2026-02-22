@@ -82,3 +82,29 @@ Se `/deploy` abrir em produção, o projeto está ativo e o domínio está apont
 - Integrar autenticação real (NextAuth/Supabase/Firebase).
 - Criar CRUD real no painel do anunciante.
 - Conectar banco de dados para anúncios.
+
+
+## 🚨 Correção definitiva para `404: NOT_FOUND` na Vercel
+
+Esse erro (com tela branca da própria Vercel) **não é erro do Next.js**. É quase sempre projeto/domínio/deploy não vinculados.
+
+### 1) Reimporte do zero na Vercel (recomendado)
+1. No Dashboard da Vercel, remova o projeto atual quebrado.
+2. Clique em **Add New → Project** e importe novamente o repositório correto.
+3. Em **Root Directory**, deixe na raiz deste projeto.
+4. Deploy.
+
+### 2) Validação após deploy
+Abra exatamente estas URLs:
+- `/`
+- `/deploy`
+- `/api/health`
+
+Se `/api/health` responder JSON, o app está publicado corretamente.
+
+### 3) Domínio/alias
+- Em **Project → Settings → Domains**, confirme que `cons-rcio-contemplado.vercel.app` está neste projeto.
+- Se necessário, remova e adicione novamente o domínio.
+
+### 4) Branch correta
+- Em **Settings → Git**, verifique Production Branch (`main` ou a branch que você usa para deploy).
