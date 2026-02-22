@@ -1,55 +1,70 @@
 # Consórcio Contemplado Brasil
 
-Site profissional em **Next.js 14 + App Router + TypeScript + TailwindCSS** agora focado em **venda de casas e plantas**, com área de login opcional e painel demonstrativo para anunciantes.
+Site profissional em **Next.js 14 + App Router + TypeScript + TailwindCSS**, focado em **venda de casas e plantas**, com login opcional e painel de anunciante em modo demonstração.
 
-## Funcionalidades
+## ✅ O que foi melhorado
 
-- Home moderna com visual premium (azul escuro, dourado e branco), CTA e animações.
-- Página **Casas e Plantas** com listagem dinâmica e filtros por categoria/valor.
-- Dados mockados em `data/properties.json` para demonstração.
-- **Login opcional** com dois perfis de demonstração:
-  - Cliente
-  - Anunciante
-- Página **Painel do Anunciante (demo)** para visualizar como será o cadastro de casas e plantas.
-- Página Sobre e Contato adaptadas ao novo posicionamento.
-- API route `POST /api/contact` para simulação de envio de lead.
+- Home mais completa com:
+  - hero de conversão,
+  - prova social,
+  - contador regressivo,
+  - destaques,
+  - oportunidades em destaque,
+  - depoimentos,
+  - FAQ.
+- Página `Casas e Plantas` com filtros por categoria e preço.
+- Login opcional com perfis **Cliente** e **Anunciante**.
+- Painel separado do anunciante para preview de cadastro de anúncios.
+- Botão flutuante de WhatsApp.
 - SEO com metadata e sitemap.
-- Configuração pronta para Vercel (`vercel.json`).
+- `not-found` customizado para melhorar UX em links inválidos.
 
 ## Estrutura principal
 
 - `app/page.tsx` - Home
 - `app/imoveis/page.tsx` - Casas e Plantas
 - `app/login/page.tsx` - Login opcional
-- `app/painel-anunciante/page.tsx` - Área demo para quem publica anúncios
-- `components/PropertyList.tsx` e `components/PropertyCardItem.tsx` - Vitrine de itens
-- `data/properties.json` - Base local mock
+- `app/painel-anunciante/page.tsx` - Painel do anunciante (demo)
+- `app/not-found.tsx` - Página 404 customizada
+- `components/PropertyList.tsx` - Filtros/listagem
+- `components/PropertyCardItem.tsx` - Card de imóvel/planta
+- `data/properties.json` - Dados mock
 
-## Instalação
+## Rodar localmente
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Deploy Vercel
+Abra: `http://localhost:3000`
 
-1. Suba o projeto no GitHub.
-2. Importe o repositório na Vercel.
-3. Deploy automático com `next build`.
+## Build de produção
 
-## Variáveis de ambiente (futuro)
+```bash
+npm run lint
+npm run build
+```
 
-Para autenticação real e envio de e-mail, adicionar na Vercel:
+## Deploy na Vercel
 
-- `NEXTAUTH_SECRET`
-- `NEXTAUTH_URL`
-- `SMTP_HOST`
-- `SMTP_USER`
-- `SMTP_PASS`
+1. Suba no GitHub.
+2. Na Vercel: **Add New > Project**.
+3. Importe o repositório.
+4. Verifique se o **Root Directory** está apontando para este projeto.
+5. Deploy.
 
-## Próximos passos sugeridos
+### Se aparecer 404 da Vercel (tela branca com `NOT_FOUND`)
 
-- Integrar login real com NextAuth.
+Normalmente é configuração de projeto/domínio e não do código:
+
+- confirme se você abriu a URL do deploy correto (Production/Preview),
+- confira se o domínio está vinculado ao projeto certo,
+- em **Project Settings > Domains**, remova/readicione o domínio se necessário,
+- faça um novo deploy após confirmar o root do projeto.
+
+## Próximos passos
+
+- Integrar autenticação real (NextAuth/Supabase/Firebase).
 - Criar CRUD real no painel do anunciante.
-- Conectar banco de dados (Supabase/Firebase).
+- Conectar banco de dados para anúncios.
