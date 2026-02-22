@@ -1,0 +1,42 @@
+[
+  {
+    "id": "imv-001",
+    "title": "Casa Moderna em Condomínio",
+    "category": "Casa",
+    "price": 890000,
+    "location": "Campinas, SP",
+    "area": 210,
+    "bedrooms": 3,
+    "status": "Disponível"
+  },
+  {
+    "id": "imv-002",
+    "title": "Planta Residencial 120m²",
+    "category": "Planta",
+    "price": 12900,
+    "location": "Projeto online",
+    "area": 120,
+    "bedrooms": 3,
+    "status": "Disponível"
+  },
+  {
+    "id": "imv-003",
+    "title": "Casa Térrea com Quintal",
+    "category": "Casa",
+    "price": 640000,
+    "location": "Sorocaba, SP",
+    "area": 160,
+    "bedrooms": 2,
+    "status": "Reservado"
+  },
+  {
+    "id": "imv-004",
+    "title": "Planta Comercial Compacta",
+    "category": "Planta",
+    "price": 9900,
+    "location": "Projeto online",
+    "area": 80,
+    "bedrooms": 0,
+    "status": "Disponível"
+  }
+]

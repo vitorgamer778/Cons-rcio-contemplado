@@ -2,9 +2,10 @@ import Link from 'next/link';
 
 const links = [
   { href: '/', label: 'Home' },
-  { href: '/cartas', label: 'Cartas Disponíveis' },
+  { href: '/imoveis', label: 'Casas e Plantas' },
   { href: '/sobre', label: 'Sobre' },
-  { href: '/contato', label: 'Contato' }
+  { href: '/contato', label: 'Contato' },
+  { href: '/login', label: 'Login (Opcional)' }
 ];
 
 export function Navbar() {

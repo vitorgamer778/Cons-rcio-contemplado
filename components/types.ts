@@ -1,10 +1,12 @@
-export type CardStatus = 'Disponível' | 'Vendido';
+export type ListingStatus = 'Disponível' | 'Reservado';
 
-export interface CreditCard {
+export interface PropertyListing {
   id: string;
-  type: 'Imóvel' | 'Veículo' | 'Pesados' | 'Serviços';
-  creditValue: number;
-  downPayment: number;
-  installments: string;
-  status: CardStatus;
+  title: string;
+  category: 'Casa' | 'Planta';
+  price: number;
+  location: string;
+  area: number;
+  bedrooms: number;
+  status: ListingStatus;
 }

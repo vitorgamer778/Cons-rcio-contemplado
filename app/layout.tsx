@@ -9,30 +9,21 @@ const baseUrl = 'https://consorciocontempladobrasil.com.br';
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Consórcio Contemplado Brasil | Crédito Imediato',
+    default: 'Consórcio Contemplado Brasil | Casas e Plantas',
     template: '%s | Consórcio Contemplado Brasil'
   },
-  description:
-    'Consórcio contemplado com liberação imediata para imóveis, veículos, pesados e serviços. Atendimento especializado em todo o Brasil.',
+  description: 'Site profissional para venda de casas e plantas com foco em conversão.',
   openGraph: {
     title: 'Consórcio Contemplado Brasil',
-    description: 'Crédito já aprovado para imóveis, veículos e investimentos.',
+    description: 'Casas e plantas com atendimento especializado.',
     url: baseUrl,
     siteName: 'Consórcio Contemplado Brasil',
     locale: 'pt_BR',
     type: 'website'
-  },
-  robots: {
-    index: true,
-    follow: true
   }
 };
 
-export default function RootLayout({
-  children
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR">
       <body>

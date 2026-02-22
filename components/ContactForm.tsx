@@ -6,7 +6,7 @@ const initialState = {
   name: '',
   phone: '',
   email: '',
-  interestType: 'Imóvel',
+  interestType: 'Casa',
   message: ''
 };
 
@@ -69,10 +69,9 @@ export function ContactForm() {
         onChange={(event) => setFormData((prev) => ({ ...prev, interestType: event.target.value }))}
         className="w-full rounded-lg border border-brand-navy/20 px-4 py-3"
       >
-        <option>Imóvel</option>
-        <option>Veículo</option>
-        <option>Pesados</option>
-        <option>Serviços</option>
+        <option>Casa</option>
+        <option>Planta</option>
+        <option>Parceria para Anunciante</option>
       </select>
       <textarea
         required
