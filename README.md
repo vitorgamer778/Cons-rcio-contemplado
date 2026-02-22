@@ -63,6 +63,20 @@ Normalmente é configuração de projeto/domínio e não do código:
 - em **Project Settings > Domains**, remova/readicione o domínio se necessário,
 - faça um novo deploy após confirmar o root do projeto.
 
+
+### Comando de verificação rápida
+
+Após publicar, teste as rotas:
+
+```bash
+/
+/imoveis
+/login
+/deploy
+```
+
+Se `/deploy` abrir em produção, o projeto está ativo e o domínio está apontando corretamente.
+
 ## Próximos passos
 
 - Integrar autenticação real (NextAuth/Supabase/Firebase).

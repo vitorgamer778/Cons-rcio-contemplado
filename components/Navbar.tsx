@@ -5,7 +5,8 @@ const links = [
   { href: '/imoveis', label: 'Casas e Plantas' },
   { href: '/sobre', label: 'Sobre' },
   { href: '/contato', label: 'Contato' },
-  { href: '/login', label: 'Login (Opcional)' }
+  { href: '/login', label: 'Login (Opcional)' },
+  { href: '/deploy', label: 'Status Deploy' }
 ];
 
 export function Navbar() {
